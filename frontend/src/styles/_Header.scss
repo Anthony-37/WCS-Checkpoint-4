@@ -1,3 +1,13 @@
-h1 {
-  color: red;
+@import "./_Variables.scss";
+
+.Header {
+  background-color: $black;
+  min-height: 60px;
+  ul {
+    display: flex;
+    li {
+      color: red;
+      margin: 0 10px;
+    }
+  }
 }
