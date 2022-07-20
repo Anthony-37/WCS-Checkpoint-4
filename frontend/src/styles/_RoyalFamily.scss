@@ -1,0 +1,14 @@
+@import "./_Variables.scss";
+
+.royal-family {
+  .full-container {
+    background-image: url(../assets/img/bg-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    h1 {
+      color: red;
+    }
+  }
+}
