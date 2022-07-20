@@ -3,8 +3,12 @@ import "../styles/_Header.scss";
 
 function Header() {
   return (
-    <div>
-      <h1>hello</h1>
+    <div className="Header">
+      <ul>
+        <li>Home</li>
+        <li>Royal Family</li>
+        <li>Asset</li>
+      </ul>
     </div>
   );
 }

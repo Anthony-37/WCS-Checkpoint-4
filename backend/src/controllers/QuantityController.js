@@ -32,8 +32,6 @@ class QuantityController {
   static edit = (req, res) => {
     const quantity = req.body;
 
-    // TODO validations (length, format...)
-
     quantity.id = parseInt(req.params.id, 10);
 
     models.quantity
@@ -53,8 +51,6 @@ class QuantityController {
 
   static add = (req, res) => {
     const quantity = req.body;
-
-    // TODO validations (length, format...)
 
     models.quantity
       .insert(quantity)
