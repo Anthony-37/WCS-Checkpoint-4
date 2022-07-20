@@ -25,11 +25,6 @@ class UserAdminController {
   static add = (req, res) => {
     const newUser = req.body;
 
-    // const validationErrors = models.user.validate(newUser);
-    // if (validationErrors) {
-    //   res.status(422).json({ validationErrors });
-    // }
-
     models.user
       .insert({ ...newUser })
       .then(() => {
