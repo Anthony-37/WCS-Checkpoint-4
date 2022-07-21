@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, NavLink } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
+import Btnreturn from "../assets/img/svg/svg-path/Btnreturn";
 import "../styles/_RoyalFamilyDetails.scss";
 
 export default function RoyalFamilyDetails() {
@@ -18,6 +19,9 @@ export default function RoyalFamilyDetails() {
       <Header />
       <div className="container">
         <div className="details-box-mobil">
+          <NavLink className="btn-return" to="/RoyalFamily">
+            <Btnreturn />
+          </NavLink>
           <img
             src={`http://localhost:5000${royalFamilyDetails.avatar}`}
             alt={royalFamilyDetails.firstname}
@@ -30,6 +34,9 @@ export default function RoyalFamilyDetails() {
         </div>
 
         <div className="details-box-desktop">
+          <NavLink className="btn-return" to="/RoyalFamily">
+            <Btnreturn />
+          </NavLink>
           <div className="left-box">
             <img
               src={`http://localhost:5000${royalFamilyDetails.picture}`}
