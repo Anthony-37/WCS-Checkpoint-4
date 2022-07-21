@@ -31,6 +31,7 @@ const router = express.Router();
 const UserAdminRouter = require("./routes/UserAdminRouter");
 const PriceRouter = require("./routes/PriceRouter");
 const QuantityRouter = require("./routes/QuantityRouter");
+const ProfilRoyalFamilyRouter = require("./routes/ProfilRoyalFamily");
 
 app.use(router);
 
@@ -38,19 +39,20 @@ app.use(router);
 router.use("/user", UserAdminRouter);
 router.use("/price", PriceRouter);
 router.use("/quantity", QuantityRouter);
+router.use("/ProfilRoyalFamily", ProfilRoyalFamilyRouter);
 
 // Redirect all requests to the REACT app
 
-app.get("*", (req, res) => {
-  res.sendFilepath.join(
-    __dirname,
-    "..",
-    "..",
-    "frontend",
-    "dist",
-    "index.html"
-  );
-});
+// app.get("*", (req, res) => {
+//   res.sendFilepath.join(
+//     __dirname,
+//     "..",
+//     "..",
+//     "frontend",
+//     "dist",
+//     "index.html"
+//   );
+// });
 
 // ready to export
 module.exports = app;

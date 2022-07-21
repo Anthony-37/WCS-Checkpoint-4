@@ -1,13 +1,15 @@
 import React from "react";
+import Slider from "../components/Slider";
 import Header from "../components/Header";
 import "../styles/_RoyalFamily.scss";
 
 export default function RoyalFamily() {
   return (
-    <section className="royal-family">
+    <section id="royal-family">
       <Header />
       <div className="container">
-        <h1>fdfjdfhdhfduhghghghghgh</h1>
+        <h1>Royal Family</h1>
+        <Slider />
       </div>
     </section>
   );
