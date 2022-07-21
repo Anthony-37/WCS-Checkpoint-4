@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import RoyalFamily from "./pages/RoyalFamily";
 import RoyalFamilyDetails from "./pages/RoyalFamilyDetails";
 import RoyalAssets from "./pages/RoyalAssets";
+import ContactUs from "./pages/ContactUs";
 
 import "./_App.scss";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/RoyalFamily" element={<RoyalFamily />} />
         <Route path="/RoyalFamilyDetails" element={<RoyalFamilyDetails />} />
         <Route path="/RoyalAssets" element={<RoyalAssets />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
       </Routes>
     </div>
   );
