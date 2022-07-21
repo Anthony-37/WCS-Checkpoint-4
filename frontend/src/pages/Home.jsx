@@ -4,7 +4,7 @@ import "../styles/_Home.scss";
 
 export default function Home() {
   return (
-    <section className="home">
+    <section id="home">
       <Header />
       <div className="container">
         <h1>Welcome to the Kingdom of Colchis</h1>

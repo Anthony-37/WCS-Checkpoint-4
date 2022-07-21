@@ -45,16 +45,16 @@ router.use("/ProfilRoyalFamily", ProfilRoyalFamilyRouter);
 
 // Redirect all requests to the REACT app
 
-app.get("*", (req, res) => {
-  res.sendFilepath.join(
-    __dirname,
-    "..",
-    "..",
-    "frontend",
-    "dist",
-    "index.html"
-  );
-});
+// app.get("*", (req, res) => {
+//   res.sendFilepath.join(
+//     __dirname,
+//     "..",
+//     "..",
+//     "frontend",
+//     "dist",
+//     "index.html"
+//   );
+// });
 
 // ready to export
 module.exports = app;

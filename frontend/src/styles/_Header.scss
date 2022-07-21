@@ -1,13 +1,42 @@
 @import "./_Variables.scss";
+@import "./_Breakpoints.scss";
 
 .Header {
   background-color: $black;
-  min-height: 60px;
+  min-height: 6rem;
+
   ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+
     li {
-      color: red;
-      margin: 0 10px;
+      color: $white;
+      margin: 0 15px;
+      position: relative;
+
+      a {
+        font-size: 1.2rem;
+        &.active {
+          color: $hover-link;
+          font-weight: 600;
+        }
+
+        @include LGmobil {
+          font-size: 1.5rem;
+        }
+
+        @include desktop {
+          font-size: 1.8rem;
+          margin: 0 25px;
+        }
+
+        &:hover {
+          color: $hover-link;
+        }
+      }
     }
   }
 }

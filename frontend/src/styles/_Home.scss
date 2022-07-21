@@ -1,6 +1,9 @@
 @import "./_Variables.scss";
+@import "./_Breakpoints.scss";
 
-.full-container {
+#home {
+  width: 100%;
+  min-height: 100vh;
   background-image: url(../assets/img/castle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +18,7 @@
     padding: 5rem 1rem;
 
     h1 {
-      font-family: "Gupter", serif;
+      font-family: $fontTitle;
       font-size: 3rem;
       font-weight: 600;
       color: $white;
@@ -24,6 +27,17 @@
       text-align: center;
       text-shadow: -0.1rem 0 $grey-black, 0 0.2rem $grey-black,
         0.2rem 0 $grey-black, 0 -0.1rem $grey-black;
+
+      @include LGmobil {
+        font-size: 3.2rem;
+        margin-top: 2.2rem;
+        margin-bottom: 20%;
+      }
+
+      @include desktop {
+        font-size: 3.8rem;
+        margin-top: 2.2rem;
+      }
     }
 
     .about-container {
@@ -36,13 +50,16 @@
       opacity: 0.7;
 
       h2 {
-        font-family: "Ibarra Real Nova", serif;
+        font-family: $fontTitle2;
         font-size: 2rem;
         margin-bottom: 1rem;
       }
 
       p {
         font-size: 1.4rem;
+        @include desktop {
+          font-size: 1.6rem;
+        }
       }
     }
   }
