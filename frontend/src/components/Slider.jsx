@@ -13,7 +13,7 @@ export default function SliderMovies() {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/ProfilRoyalFamily`)
       .then((res) => setRoyalFamilyCard(res.data));
-  });
+  }, []);
 
   const settings = {
     infinite: true,
@@ -40,7 +40,10 @@ export default function SliderMovies() {
   return (
     <Slider {...settings}>
       {RoyalFamilyCard.map((person) => (
-        <NavLink className="person-link" to="/Home">
+        <NavLink
+          className="person-link"
+          to={`/RoyalFamilyDetails?id=${person.id}`}
+        >
           <div key={person.id} className="slider-box">
             <div className="slider-img">
               <img

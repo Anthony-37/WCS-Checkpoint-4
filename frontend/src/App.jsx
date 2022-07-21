@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import RoyalFamily from "./pages/RoyalFamily";
 import Home from "./pages/Home";
+import RoyalFamily from "./pages/RoyalFamily";
+import RoyalFamilyDetails from "./pages/RoyalFamilyDetails";
 
 import "./_App.scss";
 
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/*" element={<Home />} />
         <Route path="/RoyalFamily" element={<RoyalFamily />} />
+        <Route path="/RoyalFamilyDetails" element={<RoyalFamilyDetails />} />
       </Routes>
     </div>
   );
