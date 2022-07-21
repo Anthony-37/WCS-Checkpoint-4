@@ -3,7 +3,7 @@ const models = require("../models");
 class AssetController {
   static browse = (req, res) => {
     models.asset
-      .findAll()
+      .findAllJoin()
       .then(([rows]) => {
         res.send(rows);
       })
@@ -30,14 +30,12 @@ class AssetController {
   };
 
   static edit = (req, res) => {
-    const price = req.body;
+    const asset = req.body;
 
-    // TODO validations (length, format...)
-
-    price.id = parseInt(req.params.id, 10);
+    asset.id = parseInt(req.params.id, 10);
 
     models.asset
-      .update(price)
+      .update(asset)
       .then(([result]) => {
         if (result.affectedRows === 0) {
           res.sendStatus(404);
@@ -52,14 +50,12 @@ class AssetController {
   };
 
   static add = (req, res) => {
-    const price = req.body;
-
-    // TODO validations (length, format...)
+    const asset = req.body;
 
     models.asset
-      .insert(price)
+      .insert(asset)
       .then(([result]) => {
-        res.status(201).send({ ...price, id: result.insertId });
+        res.status(201).send({ ...asset, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);

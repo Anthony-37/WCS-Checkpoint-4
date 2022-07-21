@@ -29,6 +29,7 @@ const router = express.Router();
 
 // const authRouter = require("./routes/authRouter");
 const UserAdminRouter = require("./routes/UserAdminRouter");
+const AssetRouter = require("./routes/AssetRouter");
 const PriceRouter = require("./routes/PriceRouter");
 const QuantityRouter = require("./routes/QuantityRouter");
 const ProfilRoyalFamilyRouter = require("./routes/ProfilRoyalFamily");
@@ -37,6 +38,7 @@ app.use(router);
 
 // router.use("/auth", authRouter);
 router.use("/user", UserAdminRouter);
+router.use("/asset", AssetRouter);
 router.use("/price", PriceRouter);
 router.use("/quantity", QuantityRouter);
 router.use("/ProfilRoyalFamily", ProfilRoyalFamilyRouter);

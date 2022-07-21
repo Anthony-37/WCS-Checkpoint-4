@@ -32,8 +32,6 @@ class PriceController {
   static edit = (req, res) => {
     const price = req.body;
 
-    // TODO validations (length, format...)
-
     price.id = parseInt(req.params.id, 10);
 
     models.price
@@ -53,8 +51,6 @@ class PriceController {
 
   static add = (req, res) => {
     const price = req.body;
-
-    // TODO validations (length, format...)
 
     models.price
       .insert(price)
