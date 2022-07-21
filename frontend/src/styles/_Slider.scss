@@ -1,0 +1,111 @@
+@import "./_Variables.scss";
+@import "./_Breakpoints.scss";
+
+.slick-track {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px;
+}
+
+.slick-slide > div {
+  margin: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  @include LGdesktop {
+    margin: 20px !important;
+  }
+}
+
+.slick-slider {
+  margin: auto;
+  z-index: 99999;
+}
+
+.slick-list {
+  width: 85% !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slider-img {
+  img {
+    max-width: 100%;
+  }
+}
+
+.slider-box {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 380px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  padding: 2rem 2rem 1.5rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    background-image: url(../assets/img/svg/corner.svg);
+    background-repeat: no-repeat;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    background-image: url(../assets/img/svg/corner.svg);
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .slider-img {
+    height: 80%;
+
+    img {
+      margin: auto;
+      max-height: 100%;
+    }
+  }
+
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    color: rgb(255, 255, 255) !important;
+    font-size: 2rem !important;
+
+    h2 {
+      font-size: 3.2rem;
+      font-family: $fontTitle;
+      color: #222222;
+      line-height: 3.2rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-family: $fontTitle2;
+      color: #222222;
+    }
+  }
+}
