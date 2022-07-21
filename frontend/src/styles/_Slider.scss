@@ -1,4 +1,5 @@
 @import "./_Variables.scss";
+@import "./_Breakpoints.scss";
 
 .slick-track {
   display: flex !important;
@@ -7,9 +8,12 @@
 }
 
 .slick-slide > div {
-  margin: 5px !important;
+  margin: 10px !important;
   display: flex !important;
   justify-content: center !important;
+  @include LGdesktop {
+    margin: 20px !important;
+  }
 }
 
 .slick-slider {
@@ -78,7 +82,7 @@
 
     img {
       margin: auto;
-      max-width: 45%;
+      max-height: 100%;
     }
   }
 

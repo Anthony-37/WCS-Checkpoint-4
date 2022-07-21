@@ -1,4 +1,5 @@
 @import "./_Variables.scss";
+@import "./_Breakpoints.scss";
 
 #royal-family {
   width: 100%;
@@ -15,12 +16,21 @@
     height: calc(100% - 60px);
     h1 {
       font-family: "Gupter", serif;
-      font-size: 3rem;
+      font-size: 3.6rem;
       font-weight: 600;
       color: $white;
       margin-top: 2rem;
       margin-bottom: 5rem;
       text-align: center;
+
+      @include tablet {
+        margin-bottom: 13rem;
+        font-size: 4rem;
+      }
+      @include desktop {
+        margin-bottom: 15rem;
+        font-size: 5rem;
+      }
     }
   }
 }
