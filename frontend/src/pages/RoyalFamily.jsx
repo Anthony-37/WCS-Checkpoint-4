@@ -8,7 +8,7 @@ export default function RoyalFamily() {
     <section id="royal-family">
       <Header />
       <div className="container">
-        <h1>Royal Family</h1>
+        <h1>The Royal Family</h1>
         <Slider />
       </div>
     </section>

@@ -14,7 +14,7 @@ function Header() {
             <NavLink to="/RoyalFamily">Royal Family</NavLink>
           </li>
           <li>
-            <NavLink to="/Asset">Asset</NavLink>
+            <NavLink to="/RoyalAssets">Asset</NavLink>
           </li>
           <li>
             <NavLink to="/">Visit Us</NavLink>

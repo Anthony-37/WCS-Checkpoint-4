@@ -14,22 +14,27 @@
 
     li {
       color: $white;
-      margin: 0 15px;
+      margin: 0 12px;
       position: relative;
 
       a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         &.active {
           color: $hover-link;
           font-weight: 600;
         }
 
         @include LGmobil {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
+        }
+
+        @include tablet {
+          font-size: 1.6rem;
+          margin: 0 10px;
         }
 
         @include desktop {
-          font-size: 1.8rem;
+          font-size: 1.9rem;
           margin: 0 25px;
         }
 
