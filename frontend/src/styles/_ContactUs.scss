@@ -1,0 +1,122 @@
+@import "./_Variables.scss";
+@import "./_Breakpoints.scss";
+
+#contact-us {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(rgba(14, 15, 19, 0.8), rgba(5, 5, 5, 0.5)),
+    url(../assets/img/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 6rem);
+
+    h1 {
+      font-family: "Gupter", serif;
+      font-size: 3.6rem;
+      font-weight: 600;
+      color: $white;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+
+      @include tablet {
+        margin-bottom: 3rem;
+        font-size: 4rem;
+      }
+
+      @include desktop {
+        margin-bottom: 3.5rem;
+        font-size: 5rem;
+      }
+    }
+
+    .form {
+      width: 90%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 0.5rem;
+      margin-bottom: 6rem;
+      padding: 2rem 2.5rem;
+
+      @include LGtablet {
+        width: 70%;
+      }
+
+      @include desktop {
+        width: 60%;
+      }
+
+      h2 {
+        position: relative;
+        font-family: $fontTitle2;
+        font-size: 2rem;
+        color: $white;
+        text-align: center;
+        margin-bottom: 3rem;
+        &::after {
+          position: absolute;
+          content: "";
+          background-color: #80d4eead;
+          width: 20%;
+          height: 1px;
+          bottom: -1rem;
+          left: calc(50% - 10%);
+        }
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.5rem;
+        border-radius: 0.2rem;
+
+        input {
+          padding: 0.1rem 0.8rem;
+          font-family: $fontTitle2;
+          font-size: 1.6rem;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 13rem;
+        border-radius: 0.2rem;
+        padding: 0.3rem 0.8rem;
+        font-family: $fontTitle2;
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-family: $fontTitle2;
+        font-size: 1.8rem;
+        color: #80d4ee;
+        margin-bottom: 0.5rem;
+      }
+
+      .input-btn {
+        width: 8rem;
+        height: 3rem;
+        font-size: 1.8rem;
+        font-family: $fontTitle2;
+        font-weight: 600;
+        border-radius: 0.2rem;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $hover-link;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

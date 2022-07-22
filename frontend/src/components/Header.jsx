@@ -17,10 +17,7 @@ function Header() {
             <NavLink to="/RoyalAssets">Asset</NavLink>
           </li>
           <li>
-            <NavLink to="/">Visit Us</NavLink>
-          </li>
-          <li>
-            <NavLink to="/">Contact Us</NavLink>
+            <NavLink to="/ContactUs">Contact Us</NavLink>
           </li>
         </ul>
       </nav>

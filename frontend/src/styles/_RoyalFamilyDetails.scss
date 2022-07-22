@@ -31,6 +31,22 @@
       border-radius: 5px;
       padding: 8rem 3rem 2rem;
 
+      .btn-return {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: 110%;
+        left: calc(50% - 2.5rem);
+        transform: rotate(0deg);
+        fill: rgba(74, 170, 199, 0.795);
+        transition: 0.3s;
+
+        &:hover {
+          transform: rotate(18deg);
+          transition: 0.3s;
+        }
+      }
+
       @include desktop {
         display: none;
       }
@@ -39,6 +55,41 @@
         position: absolute;
         filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
         top: -7rem;
+        animation: anim-bounce 1s ease-in both;
+      }
+
+      @keyframes anim-bounce {
+        0% {
+          transform: translateY(-3rem);
+          animation-timing-function: ease-in;
+          opacity: 0;
+        }
+
+        20% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+          opacity: 1;
+        }
+
+        40% {
+          transform: translateY(-2rem);
+          animation-timing-function: ease-in;
+        }
+
+        60% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
+
+        80% {
+          transform: translateY(-1rem);
+          animation-timing-function: ease-in;
+        }
+
+        100% {
+          transform: translateY(0);
+          animation-timing-function: ease-out;
+        }
       }
 
       .details-title {
@@ -90,6 +141,22 @@
       border-radius: 5px;
       padding: 3rem 5rem;
       display: none;
+
+      .btn-return {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: 105%;
+        left: calc(50% - 2.5rem);
+        transform: rotate(0deg);
+        fill: rgba(74, 170, 199, 0.795);
+        transition: 0.3s;
+
+        &:hover {
+          transform: rotate(18deg);
+          transition: 0.3s;
+        }
+      }
 
       @include desktop {
         display: block;
