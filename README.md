@@ -5,8 +5,8 @@ Web application that allows you to consult the characters of the royal family as
 ## User stories and backlog
 - `US_Adding_New_Table_BDD` : As administrator I can create a user as well as a new asset by determining its name, the number it contains, the unit price and the total price.
 - `US_Home_Page` : Creation of a home page.
-- `US_Royal_Family_Page` : As a user I can consult all the characters of the royal family in a dynamic carousel.
-- `US_Royal_Family_Details` : As a user I can view details about a particular royal family character.
+- `US_Royal_Family_Page` : As a user I can consult all the characters of the royal family in a dynamic carousel (information stored in the database).
+- `US_Royal_Family_Details` : As a user, I can view details about a particular royal family figure (information stored in the database).
 - `US_ContactUs_Page` : As a user I have access to a contact form allowing me to send an email to the royal family.
 
 
