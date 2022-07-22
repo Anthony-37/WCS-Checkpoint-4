@@ -30,3 +30,15 @@ Web application that allows you to consult the characters of the royal family as
 - _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
 - _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
+- _Axios_ : Allows you to make calls to the database
+- _Sass_ : css preprocessor
+- _Dotenv _ : Allows the creation of development environment
+- _Cookie-parser _ : Allows the parsing of the header and allows its recovery as an object
+- _Argon2_ : Allows password hashing
+- _Cors_ : Allows through middleware access to restricted data in normal times
+- _Joi _ : Allows you to add controls during data validation
+- _JsonWebToken_ : Allows to secure exchanges between 2 parties by means of a token
+
+
+
+
