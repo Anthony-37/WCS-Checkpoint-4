@@ -32,13 +32,14 @@ Web application that allows you to consult the characters of the royal family as
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
 - _Axios_ : Allows you to make calls to the database
 - _Sass_ : css preprocessor
-- _Dotenv _ : Allows the creation of development environment
-- _Cookie-parser _ : Allows the parsing of the header and allows its recovery as an object
+- _React-Router-Dom_ : Allows to manage application routes
+- Dotenv : Allows the creation of development environment
+- Cookie-parser : Allows the parsing of the header and allows its recovery as an object
 - Argon2 : Allows password hashing
 - Cors : Allows through middleware access to restricted data in normal times
 - Joi : Allows you to add controls during data validation
 - JsonWebToken : Allows to secure exchanges between 2 parties by means of a token
-
+- react-slick-slick-carousel : React component for managing carousels
 
 
 
