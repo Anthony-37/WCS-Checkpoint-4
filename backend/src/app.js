@@ -29,6 +29,7 @@ const router = express.Router();
 
 // const authRouter = require("./routes/authRouter");
 const UserAdminRouter = require("./routes/UserAdminRouter");
+const AuthRouter = require("./routes/AuthRouter");
 const AssetRouter = require("./routes/AssetRouter");
 const PriceRouter = require("./routes/PriceRouter");
 const QuantityRouter = require("./routes/QuantityRouter");
@@ -38,6 +39,7 @@ app.use(router);
 
 // router.use("/auth", authRouter);
 router.use("/user", UserAdminRouter);
+router.use("/auth", AuthRouter);
 router.use("/asset", AssetRouter);
 router.use("/price", PriceRouter);
 router.use("/quantity", QuantityRouter);

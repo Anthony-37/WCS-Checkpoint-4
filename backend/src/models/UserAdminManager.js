@@ -5,8 +5,8 @@ class UserAdminManager extends AbstractManager {
 
   insert(user) {
     return this.connection.query(
-      `insert into ${UserAdminManager.table} (firstname, email) values (?, ?)`,
-      [user.firstname, user.email]
+      `insert into ${UserAdminManager.table} (firstname, email, hash_password) values (?, ?, ?)`,
+      [user.firstname, user.email, user.hash_password]
     );
   }
 
@@ -15,6 +15,12 @@ class UserAdminManager extends AbstractManager {
       `update ${UserAdminManager.table} set ? where id = ?`,
       [user, id]
     );
+  }
+
+  findByUserEmail(email) {
+    return this.connection
+      .query(`select * from  ${this.table} where email = ?`, [email])
+      .then((result) => result[0]);
   }
 }
 

@@ -1,5 +1,5 @@
 const models = require("../models");
-// const { hashPassword } = require("../helpers/argonHelper");
+const { hashPassword } = require("../helpers/argonHelper");
 
 class UserAdminController {
   static browse = (req, res) => {
@@ -24,16 +24,17 @@ class UserAdminController {
 
   static add = (req, res) => {
     const newUser = req.body;
-
-    models.user
-      .insert({ ...newUser })
-      .then(() => {
-        console.error(newUser);
-        return res.status(201).json({ ...newUser });
-      })
-      .catch((err) => {
-        return res.status(500).send({ err });
-      });
+    hashPassword(newUser.password).then((hash) => {
+      models.user
+        .insert({ ...newUser, hash_password: hash })
+        .then(() => {
+          console.error(newUser);
+          return res.status(201).json({ ...newUser });
+        })
+        .catch((err) => {
+          return res.status(500).send({ err });
+        });
+    });
   };
 
   static edit = (req, res) => {
