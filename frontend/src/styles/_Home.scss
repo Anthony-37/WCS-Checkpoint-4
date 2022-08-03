@@ -4,7 +4,8 @@
 #home {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../assets/img/castle.jpg);
+  background: radial-gradient(rgba(14, 15, 19, 0.2), rgba(5, 5, 5, 0.2)),
+    url(../assets/img/castle.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

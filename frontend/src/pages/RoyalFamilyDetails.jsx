@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams, NavLink } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
-import Btnreturn from "../assets/img/svg/svg-path/Btnreturn";
+import Btnreturn from "../assets/svg/svg-path/Btnreturn";
 import "../styles/_RoyalFamilyDetails.scss";
 
 export default function RoyalFamilyDetails() {

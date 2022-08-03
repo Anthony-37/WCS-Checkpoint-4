@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const auth = require("./middlewares/auth");
 require("dotenv").config();
 
 const app = express();
@@ -38,7 +39,7 @@ const ProfilRoyalFamilyRouter = require("./routes/ProfilRoyalFamily");
 app.use(router);
 
 // router.use("/auth", authRouter);
-router.use("/user", UserAdminRouter);
+router.use("/user", auth, UserAdminRouter);
 router.use("/auth", AuthRouter);
 router.use("/asset", AssetRouter);
 router.use("/price", PriceRouter);

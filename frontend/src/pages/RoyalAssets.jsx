@@ -22,7 +22,7 @@ export default function RoyalFamily() {
         <h1>Royal Assets</h1>
         <div className="container-assets-box">
           {royalFamilyAsset.map((asset) => (
-            <div className="asset-box">
+            <div className="asset-box" key={asset.id}>
               <div className="asset-box-title">{asset.name}</div>
               <div className="asset-box-content">
                 <p>Number : {asset.quantity}</p>
